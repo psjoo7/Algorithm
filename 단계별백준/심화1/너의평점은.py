@@ -11,4 +11,7 @@ for i in range(20):
         totalSubject += float(number)
         totalGrade += float(number) * rating[grade]
 
-print(round(totalGrade/totalSubject, 6))
+if totalSubject == 0:
+    print("0.000000")
+else:
+    print("{:.6f}".format(totalGrade/totalSubject))
