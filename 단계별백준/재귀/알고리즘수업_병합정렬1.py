@@ -6,7 +6,7 @@ def merge(array, start, mid, end):
     global k
     global a
     i, j, t = start, mid+1, 0
-    temp = [0] * a
+    global temp
     while i <= mid and j <= end:
         if array[i] <= array[j]:
             temp[t] = array[i]
@@ -46,6 +46,7 @@ def merge_sort(array, start, end):
 
 
 a, k = map(int, input().split())
+temp = [0] * a
 array = list(map(int, input().split()))
 merge_sort(array, 0, len(array) - 1)
 if k > 0:
